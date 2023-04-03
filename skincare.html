@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Rogue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body >
+    
+<div class="container">
+  <header class="mag-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalId" >
+          Subscribe
+        </button>
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title " id="modalTitleId">Subscribe</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="text"
+                    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email Address">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light bg-light border-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light bg-light border-secondary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 text-center">
+        <a class="mag-header-logo text-dark" href="index.html">Rogue</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <i class="bi bi-search mx-3"></i>
+        </a>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signinId">
+          Sign in
+        </button>
+        <div class="modal fade" id="signinId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="signInId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInId">Sign in</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signUpId">
+          Sign Up
+        </button>
+        <div class="modal fade" id="signUpId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">First Name</label>
+                          <input type="text"
+                            class="form-control" name="firstName" id="firstName"placeholder="Enter First Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Last Name</label>
+                          <input type="text"
+                            class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign Up</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" >
+      <a class="p-2 text-danger-emphasis" href="index.html">Home</a>
+      <a class="p-2 text-danger-emphasis" href="lavish.html">Featured Collection</a>
+      <a class="p-2 text-danger-emphasis" href="hottopic.html">Hot Topic</a>
+      <a class="p-2 text-danger-emphasis active" href="skincare.html">Skin Care</a>
+      <a class="p-2 text-danger-emphasis" href="makeup.html">Make-up</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8"> 
+            <h2 class="mag-post-title mb-1">Your Skincare Routine Order Explained: How to Apply Your Products</h2>
+            <p class="blog-post-meta">August 11, 2022 by <a href="https://www.cosmopolitan.com/author/10200/chloe-metzger/" class="text-danger-emphasis" target="_blank">Chloe Metzger</a></p>
+            <img src="https://hips.hearstapps.com/hmg-prod/images/skincare-products-1644342467.png?crop=0.5023255813953489xw:1xh;center,top&resize=1200:*" class="img-fluid mb-2" alt="">
+            <p>It’s 2022 and skincare is everywhere, yet the one question I still get asked is about the correct order of skincare routines. And it makes sense: With the influx of ex–high school friends turned Facebook “skincare consultants,” the rise of trendy celebrity beauty products, and the overwhelming drugstore skincare selection, everyone is now stuck googling the difference between a toner and a serum, whether or not face oil goes before moisturizer (spoiler: n-o-p-e), which products actually get rid of hormonal acne, and how to get good skin with as little effort as humanly possible.</p>
+
+            <p>So that’s where I come in, along with a few dermatologists: <a href="https://www.instagram.com/shereeneidriss/" class="text-danger-emphasis" target="_blank">Shereene Idriss</a>, MD, and <a href="https://medicine.yale.edu/profile/mona-gohara/" class="text-danger-emphasis" target="_blank">Mona Gohara</a>, MD. Below, we broke down the correct skincare routine order plus the steps you can skip (!) and the best products for your exact skin type, from oily to sensitive to dry to acne-prone. But before we get started, let’s talk about why the order of your skincare matters plus the simplest, easiest, laziest routine to try first.</p>
+
+            <h3>How to Layer Your Skincare in the Right Order</h3>
+            <p>“The rule of thumb when applying skincare is to apply the lightest first and the heaviest last, since thinner products can’t penetrate thicker products,” says Dr. Idriss. So, for example, if you were to incorrectly layer a serum over your moisturizer, that serum would be rendered almost ineffective. Similarly, if you were to layer your moisturizer over a face oil, that moisturizer would be blocked from properly hydrating your skin, leading to <a href="https://www.cosmopolitan.com/style-beauty/beauty/a36685356/what-is-skin-barrier/" target="_blank" class="text-danger-emphasis">skin barrier</a> irritation and dryness over time.</p>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/skin-routine-2020-1580493539.png?resize=980:*" alt="" class="img-fluid">
+                    <small class="opacity-50">John Francis</small>
+                </div>
+            </div>
+
+            <h3>What’s the Simplest Skincare Routine for Beginners?</h3>
+            <p>PSA: You do not need a 10-step skincare routine (or even a 5-step routine). Virtually all faces and skin types do far better—see: less irritation, allergic reactions, and breakouts—with fewer products, so if you’re just starting out, keep it simple:</p>
+
+            <ul>
+                <li><b>Cleanser:</b> a gentle, sulfate-free face wash free</li>
+                <li><b>Moisturizer:</b> a simple fragrance-free formula that can be used twice a day</li>
+                <li><b>Sunscreen:</b> a mineral- or chemical-based sunscreen with at least SPF 30</li>
+            </ul>
+
+            <p>That’s it. Three products. Seriously. It’s not glamorous, but good skin doesn’t need to be (just ask your dermatologist or anyone on the <em>Cosmo</em> beauty team—<b>simple is always better</b>).</p>
+
+            <p>Of course, if you’re looking to add more products to your routine, you certainly can. Got dry skin? You can always incorporate a face oil or a hydrating serum. Dealing with breakouts? Try using a retinoid or an acne toner. As long as you go slow and keep it simple, you’ll be golden.</p>
+
+            <p>Now for the goodies….</p>
+
+            <h4 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">Skin Care Routine Order</h4>
+
+            <h2>Step:1 Cleanser</h2>
+            <h5>Morning and Night</h5>
+            <p>Please, for the love of the beauty gods, remove your makeup and <a href="https://www.cosmopolitan.com/style-beauty/beauty/a28100561/how-often-should-i-wash-my-face/" target="_blank" class="text-danger-emphasis">wash your face</a> before slathering on your products. <em><b>“For ingredients to absorb properly, you need clean skin that’s totally free of oil and grime,”</b></em> says Dr. Gohara.</p>
+            <div class="card border-0 border-start border-3 border-success rounded-0 mb-2">
+                <div class="card-body">
+                    <h6 class="card-title"><em>↠ SHEET MASKS</em></h6>
+                    <p class="card-text">
+                        <em><b>Not sure where <a href="https://www.cosmopolitan.com/style-beauty/beauty/g28939733/best-sheet-masks-reviews/" class="text-danger-emphasis" target="_blank">sheet masks</a> come in? Step one, right here. Use masks on clean skin, then pat on the excess serum left behind or lightly rinse your skin with water before moving on to your toner, serum, or moisturizer.</b></em>
+                    </p>
+                </div>
+            </div>
+
+            <p>Which means if you want to do things right—and, like, why you here if not tho?—skip the makeup wipes (they leave behind a layer of gunky residue that can break you out and irritate your face) and opt for a <a href="https://www.cosmopolitan.com/style-beauty/beauty/g28363944/best-cleansing-oil/" class="text-danger-emphasis" target="_blank">cleansing oil</a>, which dissolves all makeup without stripping your skin. Then follow up with a gentle, creamy cleanser (especially <a href="https://www.cosmopolitan.com/style-beauty/beauty/a25325527/best-acne-face-wash/" class="text-danger-emphasis" target="_blank">if you have acne-prone skin</a>). And <b>don’t complain about this being a two-step process—it’s one of the only required steps in this entire routine</b>. I’m not even a little sorry. Nope. NOPE!</p>
+
+            <hr>
+
+            <h2>Step 2: Toner</h2>
+            <h5>Morning and/or Night</h5>
+            <p>Face toners <em>used</em> to be terrible, alcohol-based liquids that irritated the hell out of your face. But today’s (good) toners are filled with either gentle, hydrating ingredients to coddle dry and sensitive skin or with chemical exfoliants to treat acne, oil, and bumps. “Toners are not meant to be something that sits around on your skin and feels heavy,” says Dr. Gohara. <b>“They’re essentially just priming your face for ingredients to be better absorbed later on.”</b></p>
+            <div class="card border-0 border-start border-3 border-success rounded-0 mb-2">
+                <div class="card-body">
+                    <h6 class="card-title"><em>↠ ESSENCES</em></h6>
+                    <p class="card-text">
+                        <em><b>Not sure where essences come in? Toners and essences are pretty interchangeable in their consistencies, so if you’re looking for when to use your essence in your skincare routine, use it as step 2 (instead of a toner).</b></em>
+                    </p>
+                </div>
+            </div>
+
+            <p>Reminder: Toner (like most of the steps on this list) is totally optional. And if yours smells like nail polish remover or pure alcohol? Ditch it. Fast. </p>
+
+            <hr>
+
+            <h2>Step 3: Serum</h2>
+            <h5>Morning and/or Night</h5>
+            <p>Ah, serums—the product you probs keep buying, never really using, and getting panicked that you’re neglecting out of confusion. But I gotchu. <b>“Serums are essentially just shots of extremely concentrated nutrients, hydrators, and antioxidants</b> that really amp up your skin health as soon as you apply them,” says Dr. Gohara. “People often skip out on using them, but they’re honestly the heavy lifters of your skincare routine.” Basically, think of toners like a sip of beer and serums like a straight shot of tequila.</p>
+
+            <p>Although, once again, serums are <em>totally optional</em>, they’re often a good first step in leveling up your skincare routine and boosting your skin health.</p>
+            
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">In the Morning...</h5>
+
+            <p>For almost all skin types, Dr. Gohara (and every other derm in existence) <b>swears by using <a href="https://www.cosmopolitan.com/style-beauty/beauty/g12091058/best-vitamin-c-serum-face-skin/" style="text-decoration-color: red; color: black;" target="_blank">vitamin C serum</a> every morning</b>, which protects your skin from the inflammation and damage caused by environmental damage during the day while also brightening dark spots and uneven tones over time. Vitamin C serum is the MVP for dry, oily, and acne-prone skin, but it’s also a little strong. So if your skin is sensitive, use it every other morning (or every two mornings) instead.</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">At Night...</h5>
+
+            <p>All skin types <b>can benefit from using a <a href="https://www.cosmopolitan.com/style-beauty/beauty/g28948492/best-hyaluronic-acid-serum/" style="text-decoration-color: red; color: black;" target="_blank">serum filled with hyaluronic acid</a></b>, which pulls water from the air into your skin to keep it hydrated while you sleep. “If you’re using acne treatments or anti-aging products, which can be drying and irritating, you want to prep your skin with as much moisture as possible first,” says Dr. Idriss. Basically, a hydrating serum is a 10/10 idea if you’re also using retinol.</p>
+
+            <hr>
+
+            <h2>Step 4: Eye Cream</h2>
+            <h5>Morning and/or Night</h5>
+            <p><a href="https://www.cosmopolitan.com/style-beauty/beauty/g2590/best-eye-creams/" class="text-danger-emphasis" target="_blank">Eye creams</a> tend to be lighter and thinner than face moisturizers, so make sure to apply them before you slather on your creams and oils (remember: light products go first and heaviest products go last).</p>
+
+            <p>An important note: Even though eye creams seem like the be-all and end-all of skincare (and anti-aging), <b>they’re honestly not necessary for most people</b>. “As long as you’re using moisturizer and sunscreen, your eye area is already getting the TLC it needs,” says Dr. Gohara. But if you wanna try one out, here’s how to choose:</p>
+            
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">In the Morning...</h5>
+
+            <p>Regardless of your skin type, look for an eye cream that has a rollerball applicator (“the cold steel ball helps a bit with fluid retention—aka under-eye bags—especially if you keep the cream in the fridge between uses,” says Dr. Gohara) and/or a formula filled with caffeine, which helps <em>temporarily</em> constrict and tighten puffy under-eyes within 20 minutes.</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">At Night...</h5>
+
+            <p><em>Also</em> regardless of your skin type: “Most people think their night eye cream has to contain some sort of retinol to help with fine lines, but in reality, <b>your eye area is delicate and at risk for rashes and irritation, so you want to be gentle,</b>” says Dr. Gohara. “Instead, tap on a simple, hydrating eye cream that’ll protect your under-eyes and repair your skin barrier overnight.”</p>
+
+            <p>Yes, you can—and should!—use a retinol around your eyes, but “it’s better to apply retinoids to your whole face rather than to just spot-treat parts of it,” she says. (Don’t worry, retinol options will come later on.)</p>
+
+            <hr>
+
+            <h2>Step 5: Spot Treatment</h2>
+            <h5>Morning or Night (Preferred)</h5>
+            <p>Ideally, <a href="https://www.cosmopolitan.com/style-beauty/beauty/g19645915/best-acne-spot-treatments/" class="text-danger-emphasis" target="_blank">spot treatments</a> are best applied at night (whether they’re for zits, scars, or dark spots), because <b>that’s when your body is working hardest to repair itself</b>. But if you’ve already used an acid-based or acne-fighting toner and/or you’re planning to layer on a retinol, try spot-treating in the morning instead, so you don’t irritate your skin with too much at once.</p>
+
+            <p>Regardless of when you apply your spot treatment, <b>make sure to tap it on <em>before</em> your moisturizer</b> so it can really penetrate your skin and do its thang without having another barrier to penetrate (before?! What?! Yes, just trust the process and keep reading).</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">FOR DARK SPOTS AND ACNE SCARS…</h5>
+
+            <p>Dr. Idriss recommends using a spot treatment with either hydroquinone (a skin-bleaching ingredient that works fast but <b>can be irritating on anyone with even <em>slightly</em> sensitive skin</b>) or <a href="https://www.cosmopolitan.com/style-beauty/beauty/g28844492/best-niacinamide-serums/" class="text-danger-emphasis" target="_blank">niacinamide</a> (aka vitamin B3), which gently brightens marks and scars over time. Niacinamide can be used daily—most formulas won’t cause irritation—but hydroquinone should be used every three days until you know how your skin responds to it. No irritation after a week? Move it up to every other day.</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">FOR PIMPLES AND BREAKOUTS…</h5>
+            <p>For acne, Dr. Gohara stands by tried-and-true <a href="https://www.cosmopolitan.com/style-beauty/beauty/g33369976/best-benzoyl-peroxide-products/" class="text-danger-emphasis" target="_blank">benzoyl peroxide</a> and <a href="https://www.cosmopolitan.com/style-beauty/beauty/a30432343/salicylic-acid-for-skin/" class="text-danger-emphasis" target="_blank">salicylic acid</a>—but not together, unless you want to irritate your skin. Benzoyl peroxide kills acne-causing bacteria (use it for classic whiteheads), while salicylic acid dissolves oil and skin cells (use it for little clogged pores and inflamed bumps).</p>
+
+            <p><b><em>How to apply ↠</em></b> Regardless of which you choose, the application is the same: Dab a thin layer (seriously—more isn’t merrier here) over your spot or zit and wait at least a full minute for it to dry. Then, <b>to prevent the treatment from getting wiped around your face, apply your moisturizer <em>around</em> the spots first</b>. When your face is fully moisturized, tap a layer of moisturizer directly over the spot treatment to seal it in without sliding it around.</p>
+
+            <hr>
+
+            <h2>Step 6: Moisturizer</h2>
+            <h5>Morning and Night</h5>
+            <p>You need to be using a <a href="https://www.cosmopolitan.com/style-beauty/beauty/g28810486/best-drugstore-moisturizer/" class="text-danger-emphasis" target="_blank">moisturizer</a>. Always. Twice a day. No matter what. I don’t care if your skin is hella oily or easily broken out or sad or scared (there’s a formula for you, promise!), because it’s the only thing that’ll keep your skin barrier—aka the very temperamental thing responsible for making your face look good—healthy and happy.</p>
+            
+            <p>“A moisturizer not only infuses your skin with hydration, but it also <b>helps trap in all the products underneath it</b> to make the ingredients even more effective,” says Dr. Idriss. You can use the same moisturizer morning and night, but if you plan to skip sunscreen (shame), your a.m. formula needs to have at <em>least</em> SPF 30. And remember to let it sink in for 5 to 10 minutes before applying makeup (if this is the end of your morning skincare routine and makeup is your next step).</p>
+
+            <hr>
+
+            <h2>Step 7: Retinol</h2>
+            <h5>Night</h5>
+            <p>“Retinoids—the general term for all vitamin A derivatives, including retinol—sink into your skin to speed up cell turnover, <b>causing your body to churn out fresher, smoother, less wrinkled skin over time</b>,” says Dr. Gohara. Good things take time, though, so remember that retinoids take four to six months of <em>consistent</em> use to give you results.</p>
+
+            <p>But just because it might take half a year to see your wrinkles smooth out doesn’t mean you won’t see more immediate results in other ways. “Retinoids trigger collagen production and cellular exfoliation,” adds Dr. Gohara, “which means they’ll also <b>fade dark spots, smooth scars, clear pores, prevent breakouts, and brighten skin</b>.” Basically, retinoids are the closest thing to magic that dermatologists have.</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">HOW TO USE THEM…</h5>
+
+            <p>If you’re new to retinoids, <b>make sure to start slow to mitigate the initial adjustment period</b> of flakes and sensitivity. “Apply a pea-size drop to your entire face one night a week for one week, then two nights a week for two weeks, then three nights a week for three weeks, and then every other night indefinitely,” says Dr. Gohara.</p>
+
+            <h5 class="text-center mb-5 mt-5" style="text-decoration: underline; text-decoration-color:red;">SKIP THIS STEP IF…</h5>
+
+            <p>You’re already using (or planning to use) a night cream with retinoids, because doubling up won’t make the anti-aging results more effective—it’ll just cause inflammation. And if you do have extra-sensitive skin, <b>apply a layer of moisturizer both 10 minutes before <em>and</em> after applying your retinol</b> to reduce irritation without totally diluting the treatment. Essentially, sandwich your face in moisture.</p>
+
+            <hr>
+
+            <h2>Step 8: Oil</h2>
+            <h5>Morning and/or Night</h5>
+            <p>“Face oils are occlusive, meaning they seal in all the ingredients and moisture you just applied to your face to keep them from evaporating as quickly,” says Dr. Idriss. On their own, <b>oils actually don’t moisturize your skin that well</b>, but when you layer them over products, they help increase your routine’s efficacy while also leaving skin soft and smooth. Just make sure to always, always apply your oils last. Yes, you read that correctly: last.</p>
+
+            <p>“Oils can easily penetrate moisturizers, serums, and treatments, but <b>no products can penetrate an oil, which means they need to be applied last</b>,” says Dr. Gohara. And don’t think that oils are just for dry skin—certain oils, like rose-hip and jojoba, can decrease excess oil in acne-prone skin, while marula and aloe oils can soothe sensitive, easily irritated skin.</p>
+
+            <hr>
+
+            <h2>Step 9: Sunscreen</h2>
+            <h5>Morning</h5>
+            <p>Okay, yes, I know I said oils go last, but <em>technically</em>, <a href="https://www.cosmopolitan.com/style-beauty/beauty/advice/g3973/best-new-sunscreens/" class="text-danger-emphasis" target="_blank">sunscreen</a> is the absolute last step. Why? “Oils are still working to penetrate and treat your skin, which is why they would go last in your skincare routine, but sunscreen isn’t trying to penetrate anything—it’s just there to protect your face and act as armor against the outside world,” says Dr. Gohara. “Basically, it’s not adding anything to your skin—it’s protecting your skin.”</p>
+
+            <p>But before you tell yourself that the SPF 15 in your foundation or moisturizer is good enough, know this: <b>“The absolute bare minimum SPF you need on your face is SPF 30,”</b> says Dr. Gohara. Unless, you know, you’re cool with premature aging, worsened acne scars, and an increased cancer risk.</p>
+
+            <hr>
+
+            <h2>Step 10: Celebrate</h2>
+            <h5>NOW</h5>
+            <p>Because you finally learned virtually everything (ish) in the world about skincare. You may now refer to yourself as a mini dermatologist (but, like, maybe not in front of any actual doctors, k?). Now, please, go deck out your face and bask in the glory of knowledge.</p>
+
+            References: <a href="https://www.cosmopolitan.com/style-beauty/beauty/a25372431/what-order-to-apply-skincare-products/" style="text-decoration-color: red; color: black;" target="_blank"><em><b>Cosmopolitan</b></em></a>
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3">
+                    <h4 class="fst-italic">About</h4>
+                    <p class="mb-0">This E-Magazine is going to be all about Beauty products, tips, new releases</p>
+                </div>
+
+                <div class="p-4 pt-1">
+                    <h4 class="fst-italic">Watch</h4>
+                    <hr>
+                    <ol class="list-unstyled mb-0">
+                    <li>
+                        <div class="embed-responsive embed-responsive-21by9">
+                        <iframe  src="https://www.youtube.com/embed/Z8Uh1z_Mja4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="embed-responsive-item"></iframe>
+                        <p>Want to know the coming trends for the cosmetics industry in 2023? Watch this video..</p>
+                        </div>
+                        </li>
+                    <hr>
+                    <li><div class="embed-responsive embed-responsive-21by9">
+                        <iframe  src="https://www.youtube.com/embed/8Z7JeSNT_B0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="embed-responsive-item" allowfullscreen></iframe>
+                        <p>New year new routine! I've switched up my daily makeup and now I do a lot of my steps backwards!!</p>
+                    </div></li>
+                    </ol>
+                </div>
+
+                <div class="p-4 pt-1">
+                    <h4 class="fst-italic">Socials</h4>
+                    <ol class="list-unstyled">
+                    <li><a href="https://www.instagram.com/kia.pineda/" class="text-danger-emphasis" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/kiapineda/" class="text-danger-emphasis" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/kiapineda1998" class="text-danger-emphasis" target="_blank">Facebook</a></li>
+                    </ol>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="mag-footer">
+  <p>Copyright &copy 2023.</p>
+  <p>
+    <a href="#" class="text-danger-emphasis">Back to top</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+  const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+</script>
+  </body>
+</html>

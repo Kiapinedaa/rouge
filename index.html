@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Rogue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="mag-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2 " data-bs-toggle="modal" data-bs-target="#modalId" >
+          Subscribe
+        </button>
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title " id="modalTitleId">Subscribe</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="text"
+                    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email Address">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light bg-light border-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light bg-light border-secondary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 text-center">
+        <a class="mag-header-logo text-dark" href="#">Rogue</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <i class="bi bi-search mx-3"></i>
+        </a>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signinId">
+          Sign in
+        </button>
+        <div class="modal fade" id="signinId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="signInId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInId">Sign in</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signUpId">
+          Sign Up
+        </button>
+        <div class="modal fade" id="signUpId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">First Name</label>
+                          <input type="text"
+                            class="form-control" name="firstName" id="firstName"placeholder="Enter First Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Last Name</label>
+                          <input type="text"
+                            class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign Up</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" >
+      <a class="p-2 text-danger-emphasis active" href="index.html" >Home</a>
+      <a class="p-2 text-danger-emphasis" href="lavish.html">Featured Collection</a>
+      <a class="p-2 text-danger-emphasis" href="hottopic.html">Hot Topic</a>
+      <a class="p-2 text-danger-emphasis" href="skincare.html`">Skin Care</a>
+      <a class="p-2 text-danger-emphasis" href="#">Make-up</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded" style="background-image: url(DSC01092.JPEG); background-size: cover;">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Lavish: Skin Essentials</h1>
+      <p class="lead my-3 pb-5">Check out this new Skin Care line that has been released last December.</p>
+      <p class="lead mb-0"><a href="lavish.html" class="text-danger-emphasis fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border border-danger rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">New</strong>
+          <h3 class="mb-0">10 Best New Beauty Productof January 2023</h3>
+          <div class="mb-1 text-muted">January 5, 2023</div>
+          <p class="card-text mb-auto">Here are the beauty product launches to add to your New Year's beauty routine. From skin care to makeup.</p>
+          <a href="https://www.teenvogue.com/story/best-new-beauty-products-january-2023" class="stretched-link text-danger-emphasis" target="_blank">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://assets.teenvogue.com/photos/63b7204f34062c4c5fef10a2/master/w_1600,c_limit/Screen%20Shot%202023-01-05%20at%202.08.41%20PM.png" class="bd-placeholder-img"  width="200" height="250" role="img" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border border-danger rounded  mb-4  h-md-250 position-relative">
+        <div class="col p-3 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Beauty</strong>
+          <h3 class="mb-0">The 9 Biggest Beauty Trends for 2023 </h3>
+          <div class="mb-1 text-muted">December 29, 2022</div>
+          <p class="mb-auto">From razor-sharp eyeliner to warmed-up hair colors, these are the beauty trends slated to rule 2023.</p>
+          <a href="https://www.vogue.com/article/biggest-beauty-trends-for-2023" class="stretched-link text-danger-emphasis" target="_blank">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://assets.vogue.com/photos/639b40e4be89488ac0bf870c/master/w_1600,c_limit/VOGUE_Y2K_02_224_V2.jpg" class="bd-placeholder-img"  width="200" height="250" role="img" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+
+
+      <article>
+        <h2 class="mag-post-title ">How Jinkx Monsoon Uses Makeup to Tell an Unspoken Tale of Queerness in Chicago</h2>
+        <p class="mag-post-meta">February 10, 2023 by <a href="https://www.allure.com/contributor/nicola-dallasen" class="text-danger-emphasis" target="_blank">Nicola Dall'Asen</a></p>
+        <img src="https://media.allure.com/photos/63e408fa65b2f38ed54bc89e/1:1/w_960,c_limit/jinkx%20monsoon%20chicago.jpg%20960w%22" alt="" class="img-fluid">
+    
+        <p>The drag queen took us backstage to show Allure how she transforms into Matron "Mama" Morton.</p>
+        
+        <p>Jinkx Monsoon hasn't even finished hitting the high note at the end of "When You're Good to Mama," but the audience is already cheering so loudly I can't hear her from where I'm sitting in the fifth row. <a href="hottopic.html" class="text-danger-emphasis">Continue reading...</a> </p>
+        <hr>
+      </article>
+        
+      <article>
+        <h2 class="mag-post-title mb-1">Your Skincare Routine Order Explained: How to Apply Your Products</h2>
+        <p class="mag-post-meta">August 11, 2022 by <a href="https://www.cosmopolitan.com/author/10200/chloe-metzger/" class="text-danger-emphasis" target="_blank">Chloe Metzger</a></p>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/skincare-products-1644342467.png?crop=0.5023255813953489xw:1xh;center,top&resize=1200:*" class="img-fluid" alt="">
+
+        <p>It’s 2022 and skincare is everywhere, yet the one question I still get asked is about the correct order of skincare routines. And it makes sense: With the influx of ex–high school friends turned Facebook “skincare consultants,” the rise of trendy celebrity beauty products, and the overwhelming drugstore skincare selection, everyone is now stuck googling the difference between a toner and a serum, whether or not face oil goes before moisturizer (spoiler: n-o-p-e), which products actually get rid of hormonal acne, and how to get good skin with as little effort as humanly possible. <a href="skincare.html" class="text-danger-emphasis">Continue reading...</a> </p>
+      
+      </article>
+
+      <hr>
+
+      <article>
+        <h2 class="mag-post-title mb-1">All the 2023 Makeup Trends You'll Want to Add to Your Beauty Routine</h2>
+        <p class="mag-post-meta">December 31, 2022 by <a href="https://www.seventeen.com/author/227448/samantha-olson/" class="text-danger-emphasis" target="_blank">Samantha Olson</a></p>
+        <img src="makeup.png" alt="" class="img-fluid mb-2">
+
+        <p> We break down all the 2023 makeup trends and get tips straight from the pros.</p>
+        <ul>
+          <li>Skinimalism</li>
+          <li>Best Believe We're Still Bejeweled</li>
+          <li>Bringing Color to Brows and Lashes</li>
+          <li>Full Face of Creative Makeup</li>
+        </ul>
+        <p> Charleston says. "Next time you're staring in the mirror and searching for inspiration, don't limit yourself to the eye or lip. Consider your whole face as a canvas and see what comes to mind. Explore, have fun, make mistakes, and do it all over again!" <a href="makeup.html" class="text-danger-emphasis">Continue Reading...</a></p>
+      </article>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 ">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">This E-Magazine is going to be all about Beauty products, tips, new releases</p>
+        </div>
+
+        <div class="p-4 pt-1">
+          <h4 class="fst-italic">Watch</h4>
+          <hr>
+          <ol class="list-unstyled mb-0">
+            <li>
+              <div class="embed-responsive embed-responsive-21by9">
+                <iframe  src="https://www.youtube.com/embed/Z8Uh1z_Mja4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="embed-responsive-item"></iframe>
+                <p style="text-align: justify;">Want to know the coming trends for the cosmetics industry in 2023? Watch this video..</p>
+              </div>
+              </li>
+            <hr>
+            <li><div class="embed-responsive embed-responsive-21by9">
+              <iframe  src="https://www.youtube.com/embed/8Z7JeSNT_B0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="embed-responsive-item" allowfullscreen></iframe>
+              <p>New year new routine! I've switched up my daily makeup and now I do a lot of my steps backwards!!</p>
+            </div></li>
+          </ol>
+        </div>
+
+        <div class="p-4 pt-1">
+          <h4 class="fst-italic">Socials</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://www.instagram.com/kia.pineda/" class="text-danger-emphasis" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/kiapineda/" class="text-danger-emphasis" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/kiapineda1998" class="text-danger-emphasis" target="_blank">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="mag-footer">
+  <p>Copyright &copy 2023.</p>
+  <p>
+    <a href="#" class="text-danger-emphasis">Back to top</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+  const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+</script>
+  </body>
+</html>

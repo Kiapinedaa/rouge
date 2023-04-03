@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Rogue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body >
+    
+<div class="container">
+  <header class="mag-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalId" >
+          Subscribe
+        </button>
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title " id="modalTitleId">Subscribe</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="text"
+                    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email Address">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light bg-light border-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light bg-light border-secondary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 text-center">
+        <a class="mag-header-logo text-dark" href="index.html">Rogue</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <i class="bi bi-search mx-3"></i>
+        </a>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signinId">
+          Sign in
+        </button>
+        <div class="modal fade" id="signinId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="signInId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInId">Sign in</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="button btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signUpId">
+          Sign Up
+        </button>
+        <div class="modal fade" id="signUpId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">First Name</label>
+                          <input type="text"
+                            class="form-control" name="firstName" id="firstName"placeholder="Enter First Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Last Name</label>
+                          <input type="text"
+                            class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign Up</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" >
+      <a class="p-2 text-danger-emphasis" href="index.html">Home</a>
+      <a class="p-2 text-danger-emphasis" href="lavish.html">Featured Collection</a>
+      <a class="p-2 text-danger-emphasis" href="hottopic.html">Hot Topic</a>
+      <a class="p-2 text-danger-emphasis" href="skincare.html">Skin Care</a>
+      <a class="p-2 text-danger-emphasis active" href="makeup.html">Make-up</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8"> 
+            <h2 class="mag-post-title mb-1">All the 2023 Makeup Trends You'll Want to Add to Your Beauty Routine</h2>
+            <p class="blog-post-meta">December 31, 2022 by <a href="https://www.seventeen.com/author/227448/samantha-olson/" class="text-danger-emphasis" target="_blank">Samantha Olson</a></p>
+            <img src="makeup.png" class="img-fluid mb-2" alt="">
+            <p><big>2022</big>  saw some of the most experimental makeup trends since the early 2000s, and the momentum for boldness isn't slowing down in the coming year. According to <a href="https://about.google/stories/year-in-search/" class="text-danger-emphasis" target="_blank">Google's Year in Search</a> data, some of the top beauty trends of 2022 included bold looks with dark lip liner and graphic eyeliner looks, which saw a 200% increase when compared to search trends in 2021. We also saw the white dot highlighting technique, doe eyes, and siren eyes trends go viral on TikTok and eventually make their way to the streets of New York Fashion Week and major red carpets like the Met Gala.</p>
+
+            <p>While makeup has historically been used as a tool to call attention to certain features or "beautify" our faces, <a href="https://about.instagram.com/blog/announcements/instagram-trends-2023" class="text-danger-emphasis" target="_blank">Instagram's Annual Trend Report</a> revealed that more Gen Z consumers are likely to use makeup as a form of self-expression rather than an avenue of emphasizing beauty in 2023. "After a couple of years of a combination of mask-wearing and the lingering effects of a pared-down beauty routine, we're now ready to jump back into bold colors and start really having fun," says <a href="https://www.instagram.com/lilly_keys/" class="text-danger-emphasis" target="_blank">Lilly Keys</a>, the makeup artist behind Olivia Rodrigo and Addison Rae's stunning looks.</p>
+
+            <p>The pro makeup artist who created Doja Cat's experimental graphic eyeliner looks, <a href="https://www.instagram.com/laurelcharleston/" class="text-danger-emphasis" target="_blank">Laurel Charleston</a>, also weighed in on how bolder makeup products are more accessible than ever. "So many new, colorful, creative products have become accessible, and as more celebrities take risks with their beauty, 2023 will be the boldest year yet for makeup," she explains.</p>
+
+            <p>We chatted with Keys, Charleston, and YouTuber <a href="https://www.youtube.com/channel/UCPHuYCxf9QJArw-4ZXXC7Ig" class="text-danger-emphasis" target="_blank">Sydney Morgan</a> to gain all the insight on the top makeup trends of 2023 so you can rock the looks before they hit your social feeds in the new year. Ahead, find all the best 2023 makeup trends, from skin tints to bold graphic liners.</p>
+
+            <h3 class="text-center  mt-3 " style="text-decoration: underline; text-decoration-color:red;">Skinimalism</h3>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-md-12">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/sabrina-carpenter-attends-the-2022-american-music-awards-at-news-photo-1671482876.jpg?resize=980:*" alt="" class="img-fluid">
+                    <small class="opacity-50">Amy Sussman // Getty Images</small>
+                </div>
+            </div>
+
+            <p>In 2022, skin tints and lightweight foundations that emphasized glowy and natural skin texture took over the beauty space and according to Charleston, the "skinimalism" trend will carry over into 2023. "It's surprising how effective a skin tint can be in evening out your tone with minimal product and texture. Even if you use a skin tint once a week, wearing a lighter foundation will destress your skin and allow it to breathe," Charleston explains.</p>
+
+            <p>Not only do we find that "less is more" with the makeup looks we're achieving, but in the content we consume. Sydney Morgan has earned over 4.14 million YouTube subscribers thanks to her beauty and lifestyle content on the platform, and she tells <em>Seventeen</em> that there's a "real shift" from the long-from beauty guru-style content we were used to seeing in the 2010s. Now, audiences tend to watch shorter videos, such as YouTube Shorts, Instagram Reels, and TikToks.</p>
+
+            <p>"I don't think crazy blended smokey eyeshadow with a black winged liner and lashes is as popular anymore because it's not as easy and accessible," Morgan tells <em>Seventeen</em>. "I saw an increase in people looking for very natural no-makeup, makeup looks this year heavily influenced by Hailey Bieber and her glowing skin."</p>
+
+            <h3 class="text-center  mt-3 " style="text-decoration: underline; text-decoration-color:red;">Best Believe We're Still Bejeweled</h3>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-md-12">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/dove-cameron-arrives-at-the-2022-met-gala-celebrating-in-news-photo-1671483847.jpg?crop=0.665xw:0.712xh;0.133xw,0.0291xh&resize=980:*" alt="" class="img-fluid">
+                    <small class="opacity-50">Kevin Mazur / MG22 // Getty Images</small>
+                </div>
+            </div>
+
+            <p>Thanks to stars like Dove Cameron and Millie Bobby Brown as well as TV shows like <em>Euphoria</em>, face gems had a major moment in 2022. "<em>Euphoria</em> ended up being a huge inspiration for beauty looks, products, and just other influencers this year. The makeup in the show is so distinct and unique and lots of people decided to recreate it and put their own spin on it. It just takes one person to make a video highlighting something to blow up and resonate with people and make them want to recreate it or get involved," Morgan says.</p>
+
+            <p>Keys believes that this last year was only the beginning for face gems and that we'll see the trend "grow even more playful" going into 2023, whether rhinestones and eyeliner are combined for epic looks or people start "having fun with color and shape."</p>
+
+            <p>"I also predict rhinestones moving onto parts of the body too, like a dusting along collarbones and shoulders," Keys tells <em>Seventeen</em>.</p>
+
+            <h3 class="text-center  mt-3 " style="text-decoration: underline; text-decoration-color:red;">Bringing Color to Brows and Lashes</h3>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-md-12">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/willow-smitharrives-at-the-apple-original-films-news-photo-1671483918.jpg?crop=0.92377xw:1xh;center,top&resize=980:*" alt="" class="img-fluid">
+                    <small class="opacity-50">Steve Granitz // Getty Images</small>
+                </div>
+            </div>
+
+            <p>Bolder colors are coming out to play in 2023, according to the pros. Keys tells <em>Seventeen</em> that one look we're going to see more of in the new year is bleached brows, which A-listers like Kendall Jenner, Willow Smith, and Kim Kardashian have embraced this past year. Keys also predicts that jewel tones, such as greens and blues, will make waves with 2023 makeup trends.</p>
+
+            <p>"One easy way to add a pop of color to your makeup routine is to change up your eye or brow color, especially with a matching look! We've seen more celebrities and influencers embrace colorful brows and lashes this year, and it continues to be an easy way to stand out," Charleston explains.</p>
+
+            <h3 class="text-center  mt-3 " style="text-decoration: underline; text-decoration-color:red;">Full Face of Creative Makeup</h3>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-md-12">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/doja-cat-attends-the-monot-womenswear-spring-summer-2023-news-photo-1671483482.jpg?crop=0.648xw:0.648xh;0.196xw,0.0114xh&resize=980:*" alt="" class="img-fluid">
+                    <small class="opacity-50">Vittorio Zunino Celotto // Getty Images</small>
+                </div>
+            </div>
+
+            <p>Creative and expressive makeup is here to stay, according to Charleston. She dishes to <em>Seventeen</em> that she received so much support after she painted "transformative [and] expressive" avant-garde makeup looks for Doja Cat during New York and Paris Fashion Week. Charleston also credits Julia Fox, Rico Nasty, Doechii, and SZA for "championing bold makeup designs that rage against sanitized standards of beauty."</p>
+
+            <p>While you may not initially think to take the reigns on your entire face when applying your makeup, it can actually be a great way to express yourself and your artistry. "It's best to think big when expanding your makeup canvas," Charleston says. "Next time you're staring in the mirror and searching for inspiration, don't limit yourself to the eye or lip. Consider your whole face as a canvas and see what comes to mind. Explore, have fun, make mistakes, and do it all over again!"</p>
+
+            References:<a href="https://www.seventeen.com/beauty/makeup-skincare/a42270971/2023-makeup-trends/" style="text-decoration-color: red; color: black;" target="_blank"><em><b>Seventeen</b></em></a>
+
+            
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3">
+                    <h4 class="fst-italic">About</h4>
+                    <p class="mb-0">This E-Magazine is going to be all about Beauty products, tips, new releases</p>
+                </div>
+
+                <div class="p-4 pt-1">
+                    <h4 class="fst-italic">Watch</h4>
+                    <hr>
+                    <ol class="list-unstyled mb-0">
+                    <li>
+                        <div class="embed-responsive embed-responsive-21by9">
+                        <iframe  src="https://www.youtube.com/embed/Z8Uh1z_Mja4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="embed-responsive-item"></iframe>
+                        <p>Want to know the coming trends for the cosmetics industry in 2023? Watch this video..</p>
+                        </div>
+                        </li>
+                    <hr>
+                    <li><div class="embed-responsive embed-responsive-21by9">
+                        <iframe  src="https://www.youtube.com/embed/8Z7JeSNT_B0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="embed-responsive-item" allowfullscreen></iframe>
+                        <p>New year new routine! I've switched up my daily makeup and now I do a lot of my steps backwards!!</p>
+                    </div></li>
+                    </ol>
+                </div>
+
+                <div class="p-4 pt-1">
+                    <h4 class="fst-italic">Socials</h4>
+                    <ol class="list-unstyled">
+                    <li><a href="https://www.instagram.com/kia.pineda/" class="text-danger-emphasis" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/kiapineda/" class="text-danger-emphasis" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/kiapineda1998" class="text-danger-emphasis" target="_blank">Facebook</a></li>
+                    </ol>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="mag-footer">
+  <p>Copyright &copy 2023.</p>
+  <p>
+    <a href="#" class="text-danger-emphasis">Back to top</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+  const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+</script>
+  </body>
+</html>

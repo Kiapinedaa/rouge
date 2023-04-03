@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Rogue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="mag-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <button type="button" class="btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalId">
+          Subscribe
+        </button>
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title " id="modalTitleId">Subscribe</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="text"
+                    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email Address">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light bg-light border-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light bg-light border-secondary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 text-center">
+        <a class="mag-header-logo text-dark" href="index.html">Rogue</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <i class="bi bi-search mx-3"></i>
+        </a>
+        <button type="button" class="btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signinId">
+          Sign in
+        </button>
+        <div class="modal fade" id="signinId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="signInId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInId">Sign in</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-danger text-danger-emphasis btn-md me-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signUpId">
+          Sign Up
+        </button>
+        <div class="modal fade" id="signUpId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                          <label for="" class="form-label">First Name</label>
+                          <input type="text"
+                            class="form-control" name="firstName" id="firstName"placeholder="Enter First Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Last Name</label>
+                          <input type="text"
+                            class="form-control" name="lastName" id="lastName" placeholder="Enter Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light bg-light border-danger" data-bs-dismiss="modal" style="color: #727272;">Close</button>
+                        <button type="button" class="btn btn-light bg-light border-danger" style="color: #727272;">Sign Up</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" >
+      <a class="p-2 text-danger-emphasis" href="index.html">Home</a>
+      <a class="p-2 text-danger-emphasis" href="lavish.html">Featured Collection</a>
+      <a class="p-2 text-danger-emphasis active" href="hottopic.html">Hot Topic</a>
+      <a class="p-2 text-danger-emphasis" href="skincare.html">Skin Care</a>
+      <a class="p-2 text-danger-emphasis" href="makeup.html">Make-up</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8"> 
+    <h2 class="mag-post-title mb-1">How Jinkx Monsoon Uses Makeup to Tell an Unspoken Tale of Queerness in Chicago</h2>
+    <p class="mag-post-meta">February 10, 2023 by <a href="https://www.allure.com/contributor/nicola-dallasen" class="text-danger-emphasis" target="_blank">Nicola Dall'Asen</a></p>
+    <img src="https://media.allure.com/photos/63e408fa65b2f38ed54bc89e/1:1/w_960,c_limit/jinkx%20monsoon%20chicago.jpg%20960w%22" alt="" class="img-fluid mb-3 mt-3">
+    <p>Jinkx was drawn in by the show's "powerful female characters," which Chicago has “in spades." In real life, she considers herself more of a Roxy Hart, but Jinkx fits seamlessly into the role of Mama, who presides over the prison block and takes bribes in exchange for her publicity services. "Mama's the character I can just step into, and it makes so much sense," she explains. "One thing I really wanted was to bring myself to the character rather than bring the character to me, so my Mama Morton is nothing like Jinkx Monsoon the persona, but I think fans of mine will see Jinkx in there."</p>
+
+    <p>Frankly, it's hard not to. If you're reading this, chances are you already know what a standard Jinx look entails: flaming copper hair, crimson lips, and more often than not a black smoky eye. It’s all pretty traditional, to match her fashion aesthetic and comedy style that draw inspiration from the 1920s, '30s, '40s, and '50s. The Mama look isn't too far off from that, the primary differences being the hair and the contouring (more on that momentarily). Few Broadway performers are allotted the creative control to fully dictate their characters' appearance, but Jinkx knew exactly how to bring Mama to life in a way no one else could.</p>
+        
+    <p>"When I create any character, I think of it as drag, no matter their gender — that's how I treat all my acting work. When I play a character like Mama Morton, even though I'm playing her as a cisgender female, it's almost like Jinkx the human has to become Jinkx the drag queen has to become Mama Morton," she jokes. "So hopefully what you're seeing is Mama Morton the character, as played by Jinkx Monsoon, created by Jinkx the human being."</p>
+
+    <div class="card border-0  border-start border-3 border-danger rounded-0" >
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>"Even though I'm playing [Mama] as a cisgender female, it's like Jinkx the human has to become Jinkx the drag queen has to become Mama Morton. So hopefully what you're seeing is Mama Morton the character, as played by Jinkx Monsoon, created by Jinkx the human being."</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <p>Despite what audiences might glean of Mama based on her unspoken lesbianism (and the fact that she's in prison), it's a look that still requires a flamboyant wig and more makeup than you've probably ever seen on one person. "She's referred to as butch. She's referred to as 'Diesel' as a nickname. Her speech patterns indicate her own kind of mannerisms, and it's clearly queer-coded," Jinkx explains. "So it was important to me that we saw that and gave glam that was true to the character." Combine that with Chicago's 1920s prison setting, and Jinkx was automatically led to what she calls "tidy" burgundy curls that are too long to be considered modern by that time period's norms. "I wanted her to feel just a little bit older and a little bit more 'around the block.'"</p>
+
+    <p>The makeup, though extreme by even a stage performer's standards, is a little pared down as compared to a classic Jinkx look. "I gave her a pretty deep smoky eye and kept contour and blush minimal. I have kind of a Black Dahlia, femme fatale look about me in the show that I think gives her enough femininity to hold the title of Mama but not so glamour pus that I can't access my butch self and play the character the way we conceived her." </p>
+
+    <p>The Mama-fication of Jinkx Monsoon begins in the shower while she's shaving, long before she even leaves to get to the theater for the day. “I use a shave cream by the brand Cremo; the <a href="https://www.amazon.com/Cremo-Sandalwood-Astonishingly-Superior-Shaving/dp/B01NA0UN40?ots=1&tag=allure0c3-20&linkCode=w50" class="text-danger-emphasis" target="_blank">sandalwood fragrance</a> is my favorite." Fresh out of the shower, <a href="https://www.sephora.com/product/clinique-moisture-surge-trade-100-hour-auto-replenishing-hydrator-P468351?om_mmc=aff-linkshare-redirect-tv2R4u9rImY&c3ch=Linkshare&c3nid=tv2R4u9rImY&affid=tv2R4u9rImY-IiPWOiTnociT94EWPGTB5w&ranEAID=tv2R4u9rImY&ranMID=2417&ranSiteID=tv2R4u9rImY-IiPWOiTnociT94EWPGTB5w&ranLinkID=10-1&browserdefault=true" class="text-danger-emphasis" target="_blank"> Clinique Moisture Surge</a> helps soothe her skin post-shave. Once she arrives backstage at the Ambassador Theater, that's when the real work begins — or in Jinkx's words, the insanity. </p>
+
+    <div class="row justify-content-center align-items-center g-2 mb-3">
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e4170c8fa724de0954773d/master/w_1600,c_limit/jinkx%20monsoon%20chicago%20makeup%20-%20before.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e4170c65b2f38ed54bc8a0/master/w_1600,c_limit/jinkx%20monsoon%20chicago%20makeup%20-%20contouring.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+    </div>
+
+    <p>"Everyone thinks I'm crazy for this, but I have such <a href="https://www.allure.com/skin-care/sensitive-skin" class="text-danger-emphasis" target="_blank"> sensitive skin</a>, so sometimes my skin does this thing called weeping where the pores just kind of leak, and it makes it really hard for the makeup to stick." Because of that, she's developed a wildly specific base routine to ensure nothing slips or slides throughout a performance. That starts with skipping face primer entirely and reaching straight for a product whose name is going to trigger middle school flashbacks: <a href="https://www.amazon.com/Maybelline-New-York-Mousse-Foundation/dp/B000VBJ61M/ref=asc_df_B000VBJ61M/?ots=1&tag=allure0c3-20&linkCode=w50" class="text-danger-emphasis" target="_blank"> Maybelline New York Dream Matte Mousse</a>. "I take a scoop of that and I put that everywhere I'm going to put makeup as though it's a primer. I use makeup to prime for the makeup."</p>
+
+    <p>The complexion routine generally just involves a lot of scooping and spreading, which is what Jinkx then does with <a href="https://www.bennye.com/product/face/foundation/creme-foundation/" class="text-danger-emphasis" target="_blank">Ben Nye Creme Foundation</a> in a shade that matches her skin tone. "It blends into the Dream Matte Mouse, and everything is now primed for me to then put on my highlight and my contour." The same cream foundation in darker and lighter shades is responsible for that contour and highlight, which Jinkx blends together before powdering the old-school way: with <a href="https://www.bennye.com/product/face/classic-face-powder/neutral-set-powder/" class="text-danger-emphasis" target="_blank">Ben Nye Neutral Set Colorless Powder</a>, a puff, and some pretty aggressive patting.</p>
+
+    <div class="row justify-content-center align-items-center g-2 mb-3">
+        <div class="col-6">
+            <img src="https://media.allure.com/photos/63e417d482f37fdc80ec6f4d/master/w_1600,c_limit/jinkx%20monsoon%20chicago%20makeup%20-%20powder.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e417d477774a61655b6787/master/w_1600,c_limit/jinkx%20monsoon%20makeup%20-%20eyebrows.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+    </div>
+
+    <p>"Girls say to me constantly two things. They say, 'Your makeup process looks insane. Why do you do it that way?'' And then at the end of the night when they look all busted, they say, 'Why do you still look so good? My makeup is cracked. My eyebrows are lifting,' blah, blah, blah," Jinkx jokes. "They'll complain about the way they look, and I'm like, 'Remember that crazy makeup process that you were making fun of me for? It's why I still look like I just did my makeup.'"</p>
+
+    <p>Speaking of <a href="https://www.allure.com/topic/eyebrows" class="text-danger-emphasis" target="_blank">eyebrows</a>, that's the one thing Jinkx doesn't think she's mastered in the makeup department. "I have never had a consistent eyebrow," she says. "My emotions kind of manifest in my makeup; When I was kind of getting ready for <em>Chicago</em>, I was still on tour with [BenDeLaCreme]. I was trying to find a new eyebrow shape, and through the tour, my eyebrows just started creeping further and further up my head. Randomly, it was like I forgot how to draw eyebrows on my face."</p>
+    
+    <p>Mama Morton inadvertently provided a respite from that. Out of drag, Jinkx has removed her natural brow hair and gotten <a href="https://www.allure.com/topic/microblading" class="text-danger-emphasis" target="_blank">microblading</a> in its place — while performing as Mama, she's just used that as a template to fill in with a liquid eyebrow pen, a pared-down technique as compared to what she did before. It's just one in a plethora of ways Mama has unexpectedly changed the way Jinkx does makeup as a drag performer. "There's something I'm enjoying about scaling it back but still seeing me. I'd like to see after my <em>[Chicago]</em> run what things I might keep from the slightly toned-down makeup."</p>
+
+    <div class="row justify-content-center align-items-center g-2 mb-3">
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e41873ba9fec1651f1bb9a/master/w_1600,c_limit/jinxk%20monsoon%20chicago%20makeup%20-%20wig.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e41873ba9fec1651f1bb9b/master/w_1600,c_limit/jinx%20monsoon%20chicago%20makeup%20after.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Courtesy of Jinkx Monsoon</small>
+        </div>
+    </div>
+
+    <p>Mama or not, you'll never see Jinkx in a no-makeup-makeup situation, that's for sure. "I promise you, in both cases, I am wearing a ton of makeup," she laughs. "My drag makeup, it's like painting with acrylics on a canvas. It's like creating a mask. If I'm not wearing a lot of makeup, I don't feel like I've transformed."</p>
+
+    <p>The finishing touches on the Mama Morton look are a smoky eye, usually accomplished with <a href="https://www.sephora.com/product/soft-glam-eyeshadow-palette-P58930227?om_mmc=aff-linkshare-redirect-tv2R4u9rImY&c3ch=Linkshare&c3nid=tv2R4u9rImY&affid=tv2R4u9rImY-lpPEWz8hAVLecvxae8IHpA&ranEAID=tv2R4u9rImY&ranMID=2417&ranSiteID=tv2R4u9rImY-lpPEWz8hAVLecvxae8IHpA&ranLinkID=10-1&browserdefault=true" class="text-danger-emphasis" target="_blank">Anastasia Beverly Hills's Soft Glam eye shadow palette</a> and Maybelline New York liquid eyeliner, a glittery highlight using <a href="https://www.sephora.com/product/bio-radiant-gel-powder-highlighter-with-fermented-arnica-P500314?om_mmc=aff-linkshare-redirect-tv2R4u9rImY&c3ch=Linkshare&c3nid=tv2R4u9rImY&affid=tv2R4u9rImY-i4n29f0qruV4VSwXgP.mzA&ranEAID=tv2R4u9rImY&ranMID=2417&ranSiteID=tv2R4u9rImY-i4n29f0qruV4VSwXgP.mzA&ranLinkID=10-1&browserdefault=true" class="text-danger-emphasis" target="_blank">Haus Labs Bio-Radiant Gel-Powder Highlighter</a> plus additional contour and blush using Anastasia Beverly Hills powders. </p>
+
+    <div class="row justify-content-center align-items-center g-2 mb-3">
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e55eda77774a61655b6791/master/w_1600,c_limit/jinkx%20monsoon%20mama%20chicago%201.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Jeremy Daniel</small>
+        </div>
+        <div class="col-md-6">
+            <img src="https://media.allure.com/photos/63e55ee23fff2161f3c22c6d/master/w_1600,c_limit/jinkx%20monsoon%20mama%20chicago%202.jpg" alt="" class="img-fluid">
+            <small class="opacity-50">Jeremy Daniel</small>
+        </div>
+    </div>
+
+    <p>If older, queer, and "around-the-block" with a little glamour make up the picture of Mama that Jinkx envisioned, she certainly accomplished it — and she knows it, too. “I'm very proud that I found a balance between something that might exist in the real world with a little drag magic added to it,” she says. Whether it's the real-life elements or the drag magic responsible, Jinkx's audiences are clearly resonating with the character more than ever — I should know, I witnessed the roaring standing ovation myself. </p>
+
+    <p> Reference: <em>All products featured on <a href="https://www.allure.com/story/jinx-monsoon-chicago-mama-morton-makeup-hair" class="text-danger-emphasis" target="_blank">Allure</a> are independently selected by our editors. However, when you buy something through our retail links, we may earn an affiliate commission.</em> </p>
+</div>
+<div class="col-md-4">
+    <div class="position-sticky" style="top: 2rem;">
+      <div class="p-4 mb-3">
+        <h4 class="fst-italic">About</h4>
+        <p class="mb-0">This E-Magazine is going to be all about Beauty products, tips, new releases</p>
+      </div>
+
+      <div class="p-4 pt-1">
+        <h4 class="fst-italic">Watch</h4>
+        <hr>
+        <ol class="list-unstyled mb-0">
+          <li>
+            <div class="embed-responsive embed-responsive-21by9">
+              <iframe  src="https://www.youtube.com/embed/Z8Uh1z_Mja4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="embed-responsive-item"></iframe>
+              <p style="text-align: justify;">Want to know the coming trends for the cosmetics industry in 2023? Watch this video..</p>
+            </div>
+            </li>
+          <hr>
+          <li><div class="embed-responsive embed-responsive-21by9">
+            <iframe  src="https://www.youtube.com/embed/8Z7JeSNT_B0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="embed-responsive-item" allowfullscreen></iframe>
+            <p>New year new routine! I've switched up my daily makeup and now I do a lot of my steps backwards!!</p>
+          </div></li>
+        </ol>
+      </div>
+
+      <div class="p-4 pt-1">
+        <h4 class="fst-italic">Socials</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://www.instagram.com/kia.pineda/" class="text-danger-emphasis" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/kiapineda/" class="text-danger-emphasis" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/kiapineda1998" class="text-danger-emphasis" target="_blank">Facebook</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  </div>
+</main>
+
+
+<footer class="mag-footer">
+  <p>Copyright &copy 2023.</p>
+  <p>
+    <a href="#" class="text-danger-emphasis">Back to top</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+  const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+</script>
+  </body>
+</html>

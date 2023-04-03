@@ -1,0 +1,84 @@
+/* stylelint-disable selector-list-comma-newline-after */
+body{
+  background-image: url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+p{
+  font-size: 1.1rem;
+}
+
+.mag-header {
+  border-bottom: 1px solid #ff0000;
+}
+
+.mag-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+  text-decoration-color: red;
+}
+
+.mag-header-logo:hover {
+  text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.active{
+  text-decoration: none;
+  
+}
+
+.button:hover{
+  background-color: #f5c0cb;
+  transition: 0.7s;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+hr{
+  color: red;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.mag-post-title {
+  font-size: 2.5rem;
+}
+.mag-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+/*
+ * Footer
+ */
+.mag-footer {
+  padding: 2.5rem 0;
+  margin-right: auto;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.mag-footer p:last-child {
+  margin-bottom: 0;
+}
